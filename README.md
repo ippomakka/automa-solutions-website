@@ -1,4 +1,4 @@
-# Automata Labs Website
+# Automa Solutions Website
 
 AI Agent Development Agency website built with Tailwind CSS and deployed to Cloudflare Pages.
 
