@@ -3,425 +3,507 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automa Solutions | We Build AI Agents That Run Your Business</title>
-    <meta name="description" content="Custom AI agents built with OpenClaw. Automate repetitive tasks and focus on growth.">
+    <title>Automa Solutions — AI Agents That Run Your Business</title>
+    <meta name="description" content="We build custom AI agents using OpenClaw. Automate repetitive tasks and focus on growth.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="output.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
-<body class="font-sans text-gray-900 bg-surface antialiased">
+<body class="bg-base text-text-primary font-sans antialiased overflow-x-hidden">
     
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div class="container-custom flex items-center justify-between h-16">
-            <a href="index.html" class="text-2xl font-bold text-primary">Automa Solutions</a>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="services.html" class="text-neutral hover:text-primary transition">Services</a>
-                <a href="case-studies.html" class="text-neutral hover:text-primary transition">Case Studies</a>
-                <a href="about.html" class="text-neutral hover:text-primary transition">About</a>
-                <a href="contact.html" class="btn-primary text-sm">Book a Call</a>
+    <nav class="fixed w-full bg-base/90 backdrop-blur-md z-50 border-b border-divider">
+        <div class="container-custom flex items-center justify-between h-20 px-6">
+            <a href="index.html" class="text-2xl font-bold tracking-tight">Automa Solutions</a>
+            <div class="hidden md:flex items-center gap-10">
+                <a href="services.html" class="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium">Services</a>
+                <a href="case-studies.html" class="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium">Work</a>
+                <a href="about.html" class="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium">About</a>
+                <a href="contact.html" class="btn-primary text-sm py-3 px-6">Book a Call</a>
             </div>
-            <button class="md:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <button class="md:hidden p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="container-custom py-4 space-y-3">
-                <a href="services.html" class="block text-neutral hover:text-primary">Services</a>
-                <a href="case-studies.html" class="block text-neutral hover:text-primary">Case Studies</a>
-                <a href="about.html" class="block text-neutral hover:text-primary">About</a>
-                <a href="contact.html" class="block text-accent font-semibold">Book a Call</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-base border-t border-divider">
+            <div class="container-custom py-6 space-y-4">
+                <a href="services.html" class="block text-text-secondary">Services</a>
+                <a href="case-studies.html" class="block text-text-secondary">Work</a>
+                <a href="about.html" class="block text-text-secondary">About</a>
+                <a href="contact.html" class="block text-lime font-semibold">Book a Call</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-gradient-to-br from-surface to-white">
+    <section class="pt-32 lg:pt-40 pb-20 lg:pb-32 px-6">
         <div class="container-custom">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-4xl lg:text-6xl font-bold text-primary leading-tight mb-6">
-                        Stop Doing Work <span class="text-accent">AI Should Handle</span>
-                    </h1>
-                    <p class="text-lg lg:text-xl text-neutral mb-8 max-w-lg">
-                        We build custom AI agents using OpenClaw that automate your repetitive tasks, so you can focus on growth.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="contact.html" class="btn-primary text-center">
-                            Book a Free Automation Audit
-                            <i data-lucide="arrow-right" class="inline w-5 h-5 ml-2"></i>
-                        </a>
-                        <a href="case-studies.html" class="btn-secondary text-center">See Our Work</a>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left: Text -->
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-pill border border-divider">
+                        <span class="w-2 h-2 bg-lime rounded-full animate-pulse"></span>
+                        <span class="text-sm font-medium text-text-secondary">Now building for 50+ businesses</span>
                     </div>
-                    <p class="mt-6 text-sm text-neutral">Trusted by 50+ businesses • Built 100+ agents • 10,000+ hours saved</p>
+                    
+                    <h1 class="text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
+                        AI Agents That 
+                        <span class="text-gradient">Actually</span> 
+                        Work
+                    </h1>
+                    
+                    <p class="text-lg lg:text-xl text-text-secondary max-w-lg leading-relaxed">
+                        We build custom AI agents using OpenClaw. No templates. No limitations. Just automation that fits your business like a glove.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="contact.html" class="btn-primary text-center inline-flex items-center justify-center gap-2">
+                            Start Your Project
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="case-studies.html" class="btn-secondary text-center">
+                            See Our Work
+                        </a>
+                    </div>
+                    
+                    <p class="text-sm text-text-secondary">
+                        Free 30-min automation audit • No commitment
+                    </p>
                 </div>
-                <div class="relative">
-                    <div class="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                                <i data-lucide="bot" class="w-6 h-6 text-accent"></i>
+                
+                <!-- Right: Card Stack -->
+                <div class="relative h-[500px] lg:h-[600px]" id="hero-cards">
+                    <!-- Card 1: Sales Agent -->
+                    <div class="absolute top-0 right-0 w-80 bg-white rounded-card shadow-card p-6 tilt-card z-30" style="transform: rotate(-3deg) translateY(0);">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-lime rounded-xl flex items-center justify-center">
+                                <i data-lucide="bot" class="w-5 h-5 text-text-primary"></i>
                             </div>
                             <div>
-                                <p class="font-semibold text-primary">Sales Follow-up Agent</p>
-                                <p class="text-sm text-neutral">Active • 24 leads processed today</p>
+                                <p class="font-semibold text-sm">Sales Agent</p>
+                                <p class="text-xs text-text-secondary">Active</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-lime"></i>
+                                <span>24 leads processed</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-lime"></i>
+                                <span>8 calls scheduled</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-lime"></i>
+                                <span>CRM updated</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-divider">
+                            <p class="text-xs text-text-secondary">Time saved today</p>
+                            <p class="text-2xl font-bold text-lime">3.5 hours</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2: Support Agent -->
+                    <div class="absolute top-20 right-20 w-80 bg-purple text-white rounded-card shadow-card p-6 tilt-card z-20" style="transform: rotate(2deg) translateY(20px);">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-sm">Support Agent</p>
+                                <p class="text-xs text-white/70">Running</p>
                             </div>
                         </div>
                         <div class="space-y-3">
-                            <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-accent flex-shrink-0"></i>
-                                <span class="text-sm">Responded to 15 new inquiries</span>
+                            <div class="bg-white/10 rounded-lg p-3">
+                                <p class="text-xs text-white/70">Response time</p>
+                                <p class="text-lg font-bold">&lt; 2 min</p>
                             </div>
-                            <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-accent flex-shrink-0"></i>
-                                <span class="text-sm">Scheduled 8 discovery calls</span>
-                            </div>
-                            <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-accent flex-shrink-0"></i>
-                                <span class="text-sm">Updated CRM with meeting notes</span>
-                            </div>
-                        </div>
-                        <div class="mt-6 pt-6 border-t">
-                            <div class="flex justify-between items-center">
-                                <span class="text-sm text-neutral">Time saved today</span>
-                                <span class="text-2xl font-bold text-accent">3.5 hours</span>
+                            <div class="bg-white/10 rounded-lg p-3">
+                                <p class="text-xs text-white/70">Tickets resolved</p>
+                                <p class="text-lg font-bold">47 today</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Decorative elements -->
-                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-accent/10 rounded-full -z-10"></div>
-                    <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/5 rounded-full -z-10"></div>
+                    
+                    <!-- Card 3: Analytics -->
+                    <div class="absolute top-40 right-40 w-72 bg-white rounded-card shadow-soft p-6 tilt-card z-10" style="transform: rotate(-2deg) translateY(40px);">
+                        <p class="text-sm font-semibold mb-4">Weekly Report</p>
+                        <div class="flex items-end gap-2 h-24">
+                            <div class="flex-1 bg-lime/30 rounded-t" style="height: 40%"></div>
+                            <div class="flex-1 bg-lime/50 rounded-t" style="height: 60%"></div>
+                            <div class="flex-1 bg-lime/70 rounded-t" style="height: 45%"></div>
+                            <div class="flex-1 bg-lime rounded-t" style="height: 85%"></div>
+                            <div class="flex-1 bg-lime/60 rounded-t" style="height: 70%"></div>
+                        </div>
+                        <p class="text-xs text-text-secondary mt-3">+127% efficiency gain</p>
+                    </div>
+                    
+                    <!-- Floating annotation -->
+                    <div class="absolute bottom-10 left-0 bg-white px-4 py-2 rounded-pill shadow-soft border border-divider">
+                        <span class="text-sm font-medium">Built for creators</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Social Proof -->
-    <section class="py-12 bg-white border-y">
-        <div class="container-custom">
-            <p class="text-center text-neutral mb-8 text-sm uppercase tracking-wider">Trusted by innovative businesses</p>
-            <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-16 opacity-60">
-                <div class="text-xl font-bold text-primary">SkillLaunch</div>
-                <div class="text-xl font-bold text-primary">FitPro Gym</div>
-                <div class="text-xl font-bold text-primary">MathMasters</div>
-                <div class="text-xl font-bold text-primary">GrowthAgency</div>
-                <div class="text-xl font-bold text-primary">TechStart</div>
+    <section class="py-16 border-y border-divider">
+        <div class="container-custom px-6">
+            <p class="text-center text-sm text-text-secondary uppercase tracking-widest mb-10">Trusted by innovative teams</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 lg:gap-20 opacity-50">
+                <span class="text-xl font-bold tracking-tight">SkillLaunch</span>
+                <span class="text-xl font-bold tracking-tight">FitPro</span>
+                <span class="text-xl font-bold tracking-tight">MathMasters</span>
+                <span class="text-xl font-bold tracking-tight">GrowthCo</span>
+                <span class="text-xl font-bold tracking-tight">TechStart</span>
             </div>
         </div>
     </section>
 
-    <!-- Problem/Solution -->
-    <section class="section-padding bg-white">
+    <!-- Features Grid -->
+    <section class="section-padding px-6">
         <div class="container-custom">
-            <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
-                <div>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-8">The Problem</h2>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4">
-                            <i data-lucide="x-circle" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
-                            <p class="text-neutral">You're drowning in repetitive tasks that eat up your day</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <i data-lucide="x-circle" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
-                            <p class="text-neutral">Your team is burned out on admin work instead of high-impact projects</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <i data-lucide="x-circle" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
-                            <p class="text-neutral">You're the bottleneck in your own business</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <i data-lucide="x-circle" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
-                            <p class="text-neutral">You've tried automation tools but nothing sticks</p>
-                        </div>
+            <div class="text-center mb-20">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6">What We Build</h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    From customer service to sales automation. If it's repetitive, we can build an agent for it.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="card group">
+                    <div class="w-14 h-14 bg-lime rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="headphones" class="w-7 h-7 text-text-primary"></i>
                     </div>
+                    <h3 class="text-xl font-bold mb-3">Customer Operations</h3>
+                    <p class="text-text-secondary mb-6">Email triage, support responses, meeting scheduling, and follow-ups that never drop the ball.</p>
+                    <a href="services.html" class="inline-flex items-center gap-2 text-sm font-semibold hover:gap-3 transition-all">
+                        Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
                 </div>
-                <div>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-8">The Solution</h2>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-accent flex-shrink-0 mt-1"></i>
-                            <p class="text-neutral">Custom AI agents built specifically for YOUR workflows</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-accent flex-shrink-0 mt-1"></i>
-                            <p class="text-neutral">Seamlessly integrates with tools you already use</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-accent flex-shrink-0 mt-1"></i>
-                            <p class="text-neutral">We train your team to manage and optimize agents</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-accent flex-shrink-0 mt-1"></i>
-                            <p class="text-neutral">Optional ongoing management so you don't have to worry</p>
-                        </div>
+                
+                <!-- Card 2 -->
+                <div class="card group">
+                    <div class="w-14 h-14 bg-purple rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="trending-up" class="w-7 h-7 text-white"></i>
                     </div>
+                    <h3 class="text-xl font-bold mb-3">Sales & Marketing</h3>
+                    <p class="text-text-secondary mb-6">Lead scoring, social media management, content repurposing, and CRM automation.</p>
+                    <a href="services.html" class="inline-flex items-center gap-2 text-sm font-semibold hover:gap-3 transition-all">
+                        Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="card group">
+                    <div class="w-14 h-14 bg-magenta/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="settings" class="w-7 h-7 text-magenta"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Business Operations</h3>
+                    <p class="text-text-secondary mb-6">Invoice processing, document generation, data entry, and inventory monitoring.</p>
+                    <a href="services.html" class="inline-flex items-center gap-2 text-sm font-semibold hover:gap-3 transition-all">
+                        Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="card group">
+                    <div class="w-14 h-14 bg-text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="w-7 h-7 text-lime"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Custom Integrations</h3>
+                    <p class="text-text-secondary mb-6">Connect any API, build custom MCP servers, integrate with your existing stack.</p>
+                    <a href="services.html" class="inline-flex items-center gap-2 text-sm font-semibold hover:gap-3 transition-all">
+                        Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="card group">
+                    <div class="w-14 h-14 bg-lime/50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="users" class="w-7 h-7 text-text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Multi-Agent Systems</h3>
+                    <p class="text-text-secondary mb-6">Orchestrate multiple agents working together. Complex workflows made simple.</p>
+                    <a href="services.html" class="inline-flex items-center gap-2 text-sm font-semibold hover:gap-3 transition-all">
+                        Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="card-accent group">
+                    <div class="w-14 h-14 bg-text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="rocket" class="w-7 h-7 text-lime"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Enterprise Solutions</h3>
+                    <p class="text-text-primary/80 mb-6">Full-scale implementations with ongoing management and priority support.</p>
+                    <a href="contact.html" class="inline-flex items-center gap-2 text-sm font-semibold hover:gap-3 transition-all">
+                        Contact us <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- How It Works -->
-    <section class="section-padding bg-surface">
+    <section class="section-padding px-6 bg-white">
         <div class="container-custom">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-4">How It Works</h2>
-                <p class="text-neutral max-w-2xl mx-auto">From discovery to deployment in 4 weeks. We handle everything so you can focus on results.</p>
+            <div class="text-center mb-20">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6">How It Works</h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    From discovery to deployment in 4 weeks. We handle everything.
+                </p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">1</div>
-                    <h3 class="text-xl font-semibold text-primary mb-2">Discovery Call</h3>
-                    <p class="text-neutral text-sm">30-minute audit of your workflows to identify automation opportunities</p>
+            
+            <div class="grid lg:grid-cols-4 gap-8">
+                <div class="relative">
+                    <div class="w-16 h-16 bg-lime rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">1</div>
+                    <h3 class="text-xl font-bold mb-3">Discovery</h3>
+                    <p class="text-text-secondary">30-minute audit of your workflows. We identify the highest-impact automation opportunities.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">2</div>
-                    <h3 class="text-xl font-semibold text-primary mb-2">Strategy</h3>
-                    <p class="text-neutral text-sm">We design your complete agent architecture and integration plan</p>
+                
+                <div class="relative">
+                    <div class="w-16 h-16 bg-purple rounded-2xl flex items-center justify-center text-2xl font-bold text-white mb-6">2</div>
+                    <h3 class="text-xl font-bold mb-3">Strategy</h3>
+                    <p class="text-text-secondary">We design your complete agent architecture and integration plan.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">3</div>
-                    <h3 class="text-xl font-semibold text-primary mb-2">Build</h3>
-                    <p class="text-neutral text-sm">We develop, test, and refine your custom AI agents</p>
+                
+                <div class="relative">
+                    <div class="w-16 h-16 bg-magenta rounded-2xl flex items-center justify-center text-2xl font-bold text-white mb-6">3</div>
+                    <h3 class="text-xl font-bold mb-3">Build</h3>
+                    <p class="text-text-secondary">We develop, test, and refine your agents. Real-world ready.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">4</div>
-                    <h3 class="text-xl font-semibold text-primary mb-2">Launch</h3>
-                    <p class="text-neutral text-sm">We train your team and hand off a fully operational system</p>
+                
+                <div class="relative">
+                    <div class="w-16 h-16 bg-text-primary rounded-2xl flex items-center justify-center text-2xl font-bold text-lime mb-6">4</div>
+                    <h3 class="text-xl font-bold mb-3">Launch</h3>
+                    <p class="text-text-secondary">We train your team and hand off a fully operational system.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing -->
-    <section class="section-padding bg-white">
+    <section class="section-padding px-6">
         <div class="container-custom">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-4">Simple, Transparent Pricing</h2>
-                <p class="text-neutral max-w-2xl mx-auto">Choose the package that fits your needs. All include setup, training, and 30-day support.</p>
+            <div class="text-center mb-20">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6">Simple Pricing</h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    No hidden fees. No surprises. Just results.
+                </p>
             </div>
-            <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            
+            <div class="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <!-- Starter -->
-                <div class="bg-white border-2 border-gray-100 rounded-2xl p-8 hover:border-accent transition">
-                    <h3 class="text-xl font-semibold text-primary mb-2">Starter</h3>
-                    <p class="text-neutral text-sm mb-6">Perfect for solo operators</p>
-                    <div class="mb-6">
-                        <span class="text-4xl font-bold text-primary">$2,500</span>
-                        <span class="text-neutral"> one-time</span>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-2">Starter</h3>
+                    <p class="text-text-secondary text-sm mb-6">Perfect for solo operators</p>
+                    <div class="mb-8">
+                        <span class="text-5xl font-bold">$2,500</span>
                     </div>
-                    <ul class="space-y-3 mb-8">
+                    <ul class="space-y-4 mb-8">
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             1 custom AI agent
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             1-2 workflow automations
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             2 tool integrations
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             1 training session
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             30-day support
                         </li>
                     </ul>
-                    <a href="contact.html" class="block w-full py-3 text-center border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition">Get Started</a>
+                    <a href="contact.html" class="block w-full py-4 text-center border-2 border-text-primary text-text-primary rounded-pill font-semibold hover:bg-text-primary hover:text-white transition-all">
+                        Get Started
+                    </a>
                 </div>
-
+                
                 <!-- Business (Featured) -->
-                <div class="bg-primary text-white rounded-2xl p-8 relative">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
-                    <h3 class="text-xl font-semibold mb-2">Business</h3>
-                    <p class="text-gray-300 text-sm mb-6">For growing teams</p>
-                    <div class="mb-6">
-                        <span class="text-4xl font-bold">$7,500</span>
-                        <span class="text-gray-300"> one-time</span>
+                <div class="card bg-text-primary text-white relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-lime text-text-primary px-4 py-1 rounded-pill text-sm font-bold">
+                        Most Popular
                     </div>
-                    <ul class="space-y-3 mb-8">
+                    <h3 class="text-xl font-bold mb-2">Business</h3>
+                    <p class="text-white/70 text-sm mb-6">For growing teams</p>
+                    <div class="mb-8">
+                        <span class="text-5xl font-bold">$7,500</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             3 integrated AI agents
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             5-7 workflow automations
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             5 tool integrations
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             3 training sessions
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             60-day support
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             Custom MCP server
                         </li>
                     </ul>
-                    <a href="contact.html" class="block w-full py-3 text-center bg-accent hover:bg-green-600 rounded-lg font-semibold transition">Get Started</a>
+                    <a href="contact.html" class="block w-full py-4 text-center bg-lime text-text-primary rounded-pill font-semibold hover:shadow-lift transition-all">
+                        Get Started
+                    </a>
                 </div>
-
+                
                 <!-- Enterprise -->
-                <div class="bg-white border-2 border-gray-100 rounded-2xl p-8 hover:border-accent transition">
-                    <h3 class="text-xl font-semibold text-primary mb-2">Enterprise</h3>
-                    <p class="text-neutral text-sm mb-6">For complex operations</p>
-                    <div class="mb-6">
-                        <span class="text-4xl font-bold text-primary">Custom</span>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-2">Enterprise</h3>
+                    <p class="text-text-secondary text-sm mb-6">For complex operations</p>
+                    <div class="mb-8">
+                        <span class="text-5xl font-bold">Custom</span>
                     </div>
-                    <ul class="space-y-3 mb-8">
+                    <ul class="space-y-4 mb-8">
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             Unlimited AI agents
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             Unlimited workflows
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             Unlimited integrations
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             Full team onboarding
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <i data-lucide="check" class="w-5 h-5 text-lime"></i>
                             Ongoing management
                         </li>
-                        <li class="flex items-center gap-3 text-sm">
-                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
-                            Priority support
-                        </li>
                     </ul>
-                    <a href="contact.html" class="block w-full py-3 text-center border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition">Contact Us</a>
+                    <a href="contact.html" class="block w-full py-4 text-center border-2 border-text-primary text-text-primary rounded-pill font-semibold hover:bg-text-primary hover:text-white transition-all">
+                        Contact Us
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Case Studies Preview -->
-    <section class="section-padding bg-surface">
-        <div class="container-custom">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-4">Real Results</h2>
-                <p class="text-neutral max-w-2xl mx-auto">See how businesses like yours are saving time and scaling faster.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
-                    <div class="h-48 bg-gradient-to-br from-primary to-blue-800 flex items-center justify-center">
-                        <i data-lucide="bar-chart-3" class="w-16 h-16 text-white/50"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold text-primary mb-2">Marketing Agency</h3>
-                        <p class="text-neutral text-sm mb-4">Saved 20 hours/week on client reporting with automated dashboards</p>
-                        <div class="flex items-center gap-2 text-accent font-semibold">
-                            <span>Read Case Study</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
-                    <div class="h-48 bg-gradient-to-br from-accent to-green-700 flex items-center justify-center">
-                        <i data-lucide="shopping-cart" class="w-16 h-16 text-white/50"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold text-primary mb-2">E-commerce Store</h3>
-                        <p class="text-neutral text-sm mb-4">Automated customer service responses, 3x faster resolution</p>
-                        <div class="flex items-center gap-2 text-accent font-semibold">
-                            <span>Read Case Study</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
-                    <div class="h-48 bg-gradient-to-br from-purple-600 to-purple-900 flex items-center justify-center">
-                        <i data-lucide="user" class="w-16 h-16 text-white/50"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold text-primary mb-2">Consulting Firm</h3>
-                        <p class="text-neutral text-sm mb-4">Eliminated scheduling back-and-forth, booked 40% more calls</p>
-                        <div class="flex items-center gap-2 text-accent font-semibold">
-                            <span>Read Case Study</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section-padding bg-primary">
+    <!-- CTA Section -->
+    <section class="section-padding px-6 bg-lime">
         <div class="container-custom text-center">
-            <h2 class="text-3xl lg:text-5xl font-bold text-white mb-6">Ready to Automate?</h2>
-            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Book a free 30-minute automation audit. We'll identify your biggest opportunities and show you exactly what's possible.</p>
-            <a href="contact.html" class="inline-block bg-accent hover:bg-green-600 text-white font-semibold py-4 px-10 rounded-lg text-lg transition transform hover:scale-105">
+            <h2 class="text-4xl lg:text-6xl font-bold text-text-primary mb-6">Ready to Automate?</h2>
+            <p class="text-xl text-text-primary/80 max-w-2xl mx-auto mb-10">
+                Book a free 30-minute automation audit. We'll identify your biggest opportunities and show you exactly what's possible.
+            </p>
+            <a href="contact.html" class="inline-block bg-text-primary text-white font-semibold py-5 px-10 rounded-pill text-lg hover:shadow-lift transition-all">
                 Book Your Free Audit
                 <i data-lucide="arrow-right" class="inline w-5 h-5 ml-2"></i>
             </a>
-            <p class="mt-6 text-gray-400 text-sm">No commitment required • You'll leave with actionable insights</p>
+            <p class="mt-6 text-text-primary/60 text-sm">No commitment required • You'll leave with actionable insights</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-text-primary text-white py-20 px-6">
         <div class="container-custom">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div>
-                    <h4 class="text-xl font-bold mb-4">Automa Solutions</h4>
-                    <p class="text-gray-400 text-sm">We build AI agents that run your business, so you can focus on growth.</p>
+                    <h4 class="text-2xl font-bold mb-4">Automa Solutions</h4>
+                    <p class="text-white/60 text-sm leading-relaxed">We build AI agents that run your business, so you can focus on growth.</p>
                 </div>
                 <div>
-                    <h5 class="font-semibold mb-4">Services</h5>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="services.html" class="hover:text-white">Customer Operations</a></li>
-                        <li><a href="services.html" class="hover:text-white">Marketing & Sales</a></li>
-                        <li><a href="services.html" class="hover:text-white">Business Operations</a></li>
-                        <li><a href="services.html" class="hover:text-white">Enterprise Solutions</a></li>
+                    <h5 class="font-semibold mb-4 text-lime">Services</h5>
+                    <ul class="space-y-3 text-sm text-white/60">
+                        <li><a href="services.html" class="hover:text-white transition">Customer Operations</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Sales & Marketing</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Business Operations</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Enterprise</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h5 class="font-semibold mb-4">Company</h5>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="case-studies.html" class="hover:text-white">Case Studies</a></li>
-                        <li><a href="about.html" class="hover:text-white">About</a></li>
-                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    <h5 class="font-semibold mb-4 text-lime">Company</h5>
+                    <ul class="space-y-3 text-sm text-white/60">
+                        <li><a href="case-studies.html" class="hover:text-white transition">Case Studies</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h5 class="font-semibold mb-4">Contact</h5>
-                    <ul class="space-y-2 text-sm text-gray-400">
+                    <h5 class="font-semibold mb-4 text-lime">Connect</h5>
+                    <ul class="space-y-3 text-sm text-white/60">
                         <li>hello@automasolutions.com</li>
-                        <li>Book a call</li>
+                        <li class="flex gap-4 mt-4">
+                            <a href="#" class="hover:text-lime transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                            <a href="#" class="hover:text-lime transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                            <a href="#" class="hover:text-lime transition"><i data-lucide="github" class="w-5 h-5"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">© 2025 Automa Solutions. All rights reserved.</p>
-                <div class="flex gap-4 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="github" class="w-5 h-5"></i></a>
-                </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-white/40 text-sm">© 2025 Automa Solutions. All rights reserved.</p>
+                <p class="text-white/40 text-sm mt-4 md:mt-0">Built with OpenClaw</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Initialize Lucide icons
         lucide.createIcons();
+        
+        // Simple scroll animations
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Animate hero cards on load
+        gsap.from("#hero-cards > div", {
+            y: 60,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.15,
+            ease: "power3.out"
+        });
+        
+        // Animate cards on scroll
+        gsap.utils.toArray(".card").forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 85%",
+                },
+                y: 40,
+                opacity: 0,
+                duration: 0.8,
+                delay: i * 0.1,
+                ease: "power3.out"
+            });
+        });
     </script>
 </body>
 </html>
