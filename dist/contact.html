@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Automata Labs - Book Your Free Automation Audit</title>
+    <meta name="description" content="Book a free 30-minute automation audit. We'll identify your biggest automation opportunities.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-gray-900 bg-surface antialiased">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="container-custom flex items-center justify-between h-16">
+            <a href="index.html" class="text-2xl font-bold text-primary">Automata Labs</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="services.html" class="text-neutral hover:text-primary transition">Services</a>
+                <a href="case-studies.html" class="text-neutral hover:text-primary transition">Case Studies</a>
+                <a href="about.html" class="text-neutral hover:text-primary transition">About</a>
+                <a href="contact.html" class="btn-primary text-sm">Book a Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-surface to-white">
+        <div class="container-custom text-center">
+            <h1 class="text-4xl lg:text-5xl font-bold text-primary mb-6">Ready to Automate?</h1>
+            <p class="text-lg lg:text-xl text-neutral max-w-2xl mx-auto">Book a free 30-minute automation audit. We'll analyze your workflows and show you exactly what's possible.</p>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <!-- Book a Call -->
+                <div class="bg-surface rounded-2xl p-8 lg:p-12">
+                    <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="calendar" class="w-7 h-7 text-accent"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-primary mb-4">Book a Free Audit</h2>
+                    <p class="text-neutral mb-6">The fastest way to get started. We'll identify your automation opportunities in 30 minutes.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <span>No commitment required</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <span>Leave with actionable insights</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            <span>Custom roadmap for your business</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="block w-full py-4 text-center bg-accent hover:bg-green-600 text-white font-semibold rounded-lg transition">
+                        Schedule on Calendly
+                        <i data-lucide="external-link" class="inline w-4 h-4 ml-2"></i>
+                    </a>
+                    <p class="text-center text-sm text-neutral mt-4">Or email us at hello@automatalabs.com</p>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white border-2 border-gray-100 rounded-2xl p-8 lg:p-12">
+                    <h2 class="text-2xl font-bold text-primary mb-4">Send a Message</h2>
+                    <p class="text-neutral mb-6">Tell us about your project and we'll get back to you within 24 hours.</p>
+                    <form class="space-y-6" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div>
+                            <label class="block text-sm font-semibold text-primary mb-2">Name</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-accent" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-primary mb-2">Email</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-accent" placeholder="you@company.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-primary mb-2">Company</label>
+                            <input type="text" name="company" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-accent" placeholder="Your company">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-primary mb-2">What do you want to automate?</label>
+                            <textarea name="message" rows="4" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-accent" placeholder="Tell us about your current workflows and what you'd like to automate..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-primary hover:bg-blue-900 text-white font-semibold rounded-lg transition">Send Message</button>
+                    </form>
+                    <p class="text-center text-sm text-neutral mt-4">Prefer to email? hello@automatalabs.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-padding bg-surface">
+        <div class="container-custom max-w-3xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Frequently Asked Questions</h2>
+            </div>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl">
+                    <h3 class="font-semibold text-primary mb-2">What is OpenClaw?</h3>
+                    <p class="text-neutral text-sm">OpenClaw is an open platform for building AI agents that can use tools, access APIs, and automate workflows. It's more flexible than no-code tools and more accessible than building from scratch.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl">
+                    <h3 class="font-semibold text-primary mb-2">How long does it take?</h3>
+                    <p class="text-neutral text-sm">Most projects take 2-4 weeks from kickoff to launch. Simple single-agent setups can be faster, while complex multi-agent systems may take longer.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl">
+                    <h3 class="font-semibold text-primary mb-2">Do I need technical skills?</h3>
+                    <p class="text-neutral text-sm">No. We handle all the technical work. You just need to understand your workflows and be available for feedback during the build process.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl">
+                    <h3 class="font-semibold text-primary mb-2">What if it doesn't work?</h3>
+                    <p class="text-neutral text-sm">We include 30 days of support after launch to fix any issues. Our process includes thorough testing to catch problems before they affect your business.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl">
+                    <h3 class="font-semibold text-primary mb-2">How much does ongoing management cost?</h3>
+                    <p class="text-neutral text-sm">Optional management packages start at $1,500/month. This includes monitoring, updates, optimization, and support. Most clients can self-manage after training.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Automata Labs</h4>
+                    <p class="text-gray-400 text-sm">We build AI agents that run your business.</p>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4">Services</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="services.html" class="hover:text-white">Customer Operations</a></li>
+                        <li><a href="services.html" class="hover:text-white">Marketing & Sales</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4">Company</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="case-studies.html" class="hover:text-white">Case Studies</a></li>
+                        <li><a href="about.html" class="hover:text-white">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4">Contact</h5>
+                    <p class="text-gray-400 text-sm">hello@automatalabs.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 text-sm">© 2025 Automata Labs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "automata-labs",
+  "version": "1.0.0",
+  "description": "AI Agent Development Agency",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "dev": "npx serve dist"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
